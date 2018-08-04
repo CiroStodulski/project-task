@@ -3,11 +3,11 @@ var mongoosePaginate = require('mongoose-paginate');
 
 var schema = mongoose.Schema({
 
-    task: {
-        type: Object,
+    type: {
+        type: Number,
         required: true
     },
-    nome: {
+    name: {
         type: String,
         required: true
     }

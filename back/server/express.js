@@ -16,6 +16,7 @@ app.use(bodyParser.json());
 // load required modules
 consign()
     .include('config/dbconnection.js')
+    .include('src/models')
     .then('src')
     .into(app);
 

@@ -9,7 +9,7 @@ var schema = mongoose.Schema({
         unique: true
     },
     tasks: {
-        type: Number,
+        type: Array,
         required: true
     }
     
