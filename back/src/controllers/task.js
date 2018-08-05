@@ -6,12 +6,12 @@ let controller = {};
 module.exports = app => {
     
     controller.post = (req, res) => {
-        const project = req.param.project,
+        const project = req.params.project,
             controllerProject = app.src.controllers.project,
             task = req.body;
         task.date = new Date(task.date);
         task._id = mongoose.Types.ObjectId();
-        modelProject.update(project, {
+        modelProject.updateOne({_id:project}, {
                 $push: {
                     tasks: task
                 }
