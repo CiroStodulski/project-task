@@ -7,7 +7,6 @@ module.exports = app => {
         .post(projectController.add);
     
     app.route('/api/projects/:id')
-        .put(projectController.update)
         .delete(projectController.remove);
 
 }
